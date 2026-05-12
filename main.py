@@ -1,7 +1,6 @@
-import streamlit as  st
-import pandas as pd
-import numpy as np
-import os 
+from utils.fetcher import fetch_problem
+from utils.validator import get_problem
 
-st.set_page_config(page_title="Kuch to karna padega")
-st.title("Developing someting")
+user_question = int(input("Enter question you want to solve:\n"))
+imp_params_dict = fetch_problem()
+get_problem(imp_params_dict=imp_params_dict,user_question=user_question)
