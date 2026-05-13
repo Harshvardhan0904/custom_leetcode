@@ -92,7 +92,7 @@ ollama pull llama3.2
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/debugduck.git
+git clone (https://github.com/Harshvardhan0904/custom_leetcode)
 cd debugduck
 
 # 2. Create and activate virtual environment
