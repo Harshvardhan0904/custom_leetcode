@@ -1,3 +1,4 @@
+import click
 from utils.file_handler import create_file
 from utils.get_ai_tags import valid_tags
 from utils.get_question import map_question, create_table
