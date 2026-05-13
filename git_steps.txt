@@ -1,0 +1,11 @@
+| Command                  | Purpose              |
+| ------------------------ | -------------------- |
+| `git init`               | Start Git            |
+| `git status`             | See changes          |
+| `git add .`              | Stage files          |
+| `git commit -m ""`       | Save snapshot        |
+| `git push`               | Upload code          |
+| `git pull`               | Download latest code |
+| `git checkout -b branch` | Create branch        |
+| `git merge`              | Merge branches       |
+| `git log`                | Commit history       |

@@ -1,4 +1,5 @@
 def map_lang(lang: str)-> tuple:
+    
     lang_map = {
         "python3"    : ".py",
         "python"     : ".py",
@@ -31,6 +32,7 @@ def map_lang(lang: str)-> tuple:
         ".cs"   : "//",
         ".php"  : "//",
     }
+    lang = lang.lower()
     mapped_lang =lang_map[lang]
     cmnt_map = comment_map[mapped_lang]
 
