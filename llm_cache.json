@@ -1,16 +1,7 @@
 {
-  "data science": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Sorting",
-    "Matrix",
-    "Dynamic Programming",
-    "Probability and Statistics"
-  ],
   "ml": [
+    "Data Stream",
     "Probability and Statistics",
-    "Combinatorics",
-    "Game Theory"
+    "Hash Function"
   ]
 }

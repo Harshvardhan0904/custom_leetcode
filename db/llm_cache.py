@@ -1,12 +1,16 @@
 import json
 import os 
 from llm.get_ai_tags import valid_tags
+
 file_name = "llm_cache.json"
 
 def load_cache(file_name=file_name):
     if os.path.exists(file_name):
-        with open(file_name,'r') as f:
-            return json.load(f)
+        try:
+            with open(file_name,'r') as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            return {}
     return {}
 
 def save_cache(cache):
