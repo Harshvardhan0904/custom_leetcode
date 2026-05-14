@@ -2,7 +2,7 @@ import click
 from utils.file_handler import create_file
 from utils.get_ai_tags import valid_tags
 from utils.get_question import map_question, create_table
-from utils.get_all_info import get_question_no
+from utils.get_all_info import get_question
 from utils.get_available_languages import show_language
 from utils.map_lang import map_lang
 from utils.display import clean_text
@@ -40,7 +40,7 @@ def main():
     question_id = prompt("From the above listed questions, select a question number you want to solve:\n")
 
     try:
-        question_info = get_question_no(question_no=question_id)
+        question_info = get_question(question_no=question_id)
     except Exception as e:
         print(f"Could not fetch question '{question_id}': {e}")
         return
@@ -61,11 +61,9 @@ def main():
     question_title = question_info['slug']
     difficulty = question_info['difficulty']
 
-
-    code_str = next(
-        (lang['code'] for lang in question_info['code'] if lang['lang'] == language_input),
-        None
-    )
+    lang = list(question_info['code'].keys())
+    code_template = list(question_info['code'].values())
+    code_str = question_info['code'].get(language_input, None)
     if code_str is None:
         print(f"No code template found for '{language_input}'. Please try a different language.")
         return
