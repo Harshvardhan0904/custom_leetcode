@@ -1,6 +1,6 @@
 import json
 import os 
-from utils.get_ai_tags import valid_tags
+from llm.get_ai_tags import valid_tags
 file_name = "llm_cache.json"
 
 def load_cache(file_name=file_name):

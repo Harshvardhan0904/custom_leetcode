@@ -1,6 +1,6 @@
 import click
-from utils.file_handler import create_file
-from utils.llm_cache import get_tags_from_domain
+from file_gen.file_handler import create_file
+from db.llm_cache import get_tags_from_domain
 from utils.get_question import map_question, create_table
 from utils.get_all_info import get_question
 from utils.get_available_languages import show_language
