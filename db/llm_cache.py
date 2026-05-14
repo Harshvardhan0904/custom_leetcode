@@ -6,7 +6,7 @@ file_name = "llm_cache.json"
 def load_cache(file_name=file_name):
     if os.path.exists(file_name):
         with open(file_name,'r') as f:
-            return json.loads(f)
+            return json.load(f)
     return {}
 
 def save_cache(cache):

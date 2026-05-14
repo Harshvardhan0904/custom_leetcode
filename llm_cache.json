@@ -7,5 +7,10 @@
     "Matrix",
     "Dynamic Programming",
     "Probability and Statistics"
+  ],
+  "ml": [
+    "Probability and Statistics",
+    "Combinatorics",
+    "Game Theory"
   ]
 }
