@@ -1,6 +1,6 @@
 import click
 from utils.file_handler import create_file
-from utils.get_ai_tags import valid_tags
+from utils.llm_cache import get_tags_from_domain
 from utils.get_question import map_question, create_table
 from utils.get_all_info import get_question
 from utils.get_available_languages import show_language
@@ -22,7 +22,7 @@ def main():
     field = prompt("Tell about the field you are interested in:\n").lower()
 
     try:
-        related_tags = valid_tags(field=field)
+        related_tags = get_tags_from_domain(domain=field)
     except Exception as e:
         print(f"Failed to fetch tags for '{field}': {e}")
         return
