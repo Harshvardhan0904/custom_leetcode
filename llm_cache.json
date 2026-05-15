@@ -4,5 +4,24 @@
     "Database",
     "Greedy",
     "Probability and Statistics"
+  ],
+  "data scienvce": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Sorting",
+    "Matrix",
+    "Dynamic Programming"
+  ],
+  "data science": [],
+  "data analyst": [
+    "Array",
+    "Backtracking",
+    "Binary Search",
+    "Data Stream",
+    "Design",
+    "Hash Function",
+    "Hash Table",
+    "Sorting"
   ]
 }

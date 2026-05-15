@@ -26,3 +26,6 @@ def create_file(file_name, mapped_lang, difficulty, user_question, code, cmt, de
         f.write(template)
 
     print(f"[DONE] Saved to: {file_saving_loc}")
+    curr_dir = os.getcwd()
+    full_file_path = os.path.join(curr_dir,file_saving_loc)
+    return os.path.normpath(full_file_path)

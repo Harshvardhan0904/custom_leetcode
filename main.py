@@ -8,7 +8,7 @@ from utils.get_all_info import get_question
 from utils.get_available_languages import show_language
 from utils.map_lang import map_lang
 from utils.display import clean_text
-
+import subprocess
 console = Console()
 
 
@@ -81,7 +81,7 @@ def main():
 
     try:
         with console.status("[yellow]Generating your file...[/yellow]"):
-            create_file(
+            file_path = create_file(
                 file_name=question_title,
                 mapped_lang=extension,
                 difficulty=difficulty,
@@ -92,6 +92,11 @@ def main():
             )
         console.print(f"\n[bold green]File created successfully for '{question_title}' in {language_input}![/bold green]")
         console.print("[bold green]Happy Coding! 🦥[/bold green]\n")
+        try:
+            console.print(file_path)
+            subprocess.run(["code",file_path],shell=True)
+        except Exception as e:
+            console.print(f"[bold lightblue][ERROR]: could not open VS CODE due to: << {e} >> Still you can manually open a solve the problem")
     except Exception as e:
         console.print(f"[red]Failed to create file: {e}[/red]")
 
