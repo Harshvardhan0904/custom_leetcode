@@ -1,7 +1,8 @@
 {
   "ml": [
     "Data Stream",
-    "Probability and Statistics",
-    "Hash Function"
+    "Database",
+    "Greedy",
+    "Probability and Statistics"
   ]
 }

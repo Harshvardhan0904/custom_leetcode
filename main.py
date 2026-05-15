@@ -36,12 +36,12 @@ def main():
         return
     # Step 1 — Get tags from LLMadsfsdg
     try:
-        with console.status("[yellow]🧠 Fetching tags and getting related questions...[/yellow]"):
+        with console.status("[yellow]Fetching tags and getting related questions...[/yellow]"):
             related_tags = get_tags_from_domain(domain=field)
     except Exception as e:
         console.print(f"[red]Failed to fetch tags for '{field}': {e}[/red]")
         return
-    console.print(f"[green]✅ Tags:[/green] {', '.join(related_tags)}\n")
+    console.print(f"[green]Tags:[/green] {', '.join(related_tags)}\n")
 
     # Step 2 — Filter questions
     try:
@@ -80,7 +80,7 @@ def main():
         return
 
     try:
-        with console.status("[yellow]📁 Generating your file...[/yellow]"):
+        with console.status("[yellow]Generating your file...[/yellow]"):
             create_file(
                 file_name=question_title,
                 mapped_lang=extension,
@@ -90,7 +90,7 @@ def main():
                 cmt=comment_syntax,
                 desc=clean_desc
             )
-        console.print(f"\n[bold green]✅ File created successfully for '{question_title}' in {language_input}![/bold green]")
+        console.print(f"\n[bold green]File created successfully for '{question_title}' in {language_input}![/bold green]")
         console.print("[bold green]Happy Coding! 🦥[/bold green]\n")
     except Exception as e:
         console.print(f"[red]Failed to create file: {e}[/red]")
