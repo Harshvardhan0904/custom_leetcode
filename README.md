@@ -25,9 +25,9 @@ File opens in VS Code with problem + starter code
 ## Demo
 
 ```
-$ python debugduck.py
+$ python main.py
 
-🦆 LazyLeetCode — AI Powered LeetCode Practice
+🥱 LazyLeetCode — AI Powered LeetCode Practice
 
 What domain are you interested in? → backend development
 
@@ -93,7 +93,7 @@ ollama pull llama3.2
 ```bash
 # 1. Clone the repo
 git clone (https://github.com/Harshvardhan0904/custom_leetcode)
-cd debugduck
+cd lazyleetcode
 
 # 2. Create and activate virtual environment
 python -m venv venv
